@@ -23,8 +23,6 @@ def get_new_file(filename, commit):
     (results, code) = git(('git', 'show', '%s:%s' % (commit, filename)))
     return results
 
-if __name__ == '__main__':
-    pass
 repo = os.getcwd()
 basedir = os.path.join(repo, "..")
 
