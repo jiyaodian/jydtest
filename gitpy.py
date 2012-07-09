@@ -6,7 +6,6 @@ sdf
 """
 
 import os
-sd
 def test():
     """
     adfad
