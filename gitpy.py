@@ -6,7 +6,6 @@ sdf
 """
 
 import os
-import xxsssd
 def test():
     """
     adfad
