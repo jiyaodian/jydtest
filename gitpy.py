@@ -145,7 +145,7 @@ def main():
         repo = Github('jiyaodian', 'mm6801112').get_user().get_repo('jydtest')
         event = repo.get_events()[0]
         if event.payload['size'] == 0:
-            delete_build()
+            #delete_build()
         os.remove('delete_build')
         code = 0
     else:
