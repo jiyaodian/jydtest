@@ -138,7 +138,7 @@ def delete_build():
 def main():
     """
     常量信息最好通过配置文件输入
-    当存在delete_build文件，且这次push的commit数量为0的时候删除build。
+    当存在delete_build文件，且这次push的commit数量为0的时候删除build
     否则继续进行代码规范检测
     """
     if os.path.isfile('delete_build'):
