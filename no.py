@@ -14,6 +14,10 @@ from github import Github
 sdfsfs
 sf
 sss
+sdos
+sos
+fa
+
 DEBUG = True
 PYLINT_MIN_SCORE = 8
 
