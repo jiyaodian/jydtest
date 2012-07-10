@@ -25,8 +25,6 @@ def init_log():
     """
     init logger
     """
-    
-    
     logger = logging.getLogger("style_check")
     logger.setLevel(logging.DEBUG)
     ch = logging.FileHandler('style_check.log')
@@ -186,5 +184,4 @@ def main():
 if __name__ == '__main__':
     if main() == 1:
         exit(1)
-
 
