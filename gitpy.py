@@ -135,7 +135,7 @@ def delete_build():
 
 def main():
     """
-    dsfsdf
+    检查是不是有delete_build文件，有就删除build
     """
     if os.path.isfile('delete_build'):
         delete_build()
