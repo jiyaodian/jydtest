@@ -6,7 +6,7 @@ sdf
 """
 
 import os
-sd
+oooo
 def test():
     """
     addfsdfsadfad
