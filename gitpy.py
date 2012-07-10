@@ -6,3 +6,4 @@
 必须在jenkins服务器上面运行。。
 需要jenkins的环境变量
 """
+sfls
