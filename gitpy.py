@@ -12,6 +12,7 @@ import codecs
 from github import Github
 
 DEBUG = True
+PYLINT_MIN_SCORE = 8
 
 class StyleCheck:
     """
@@ -83,10 +84,10 @@ class StyleCheck:
         for file_path in file_list:
             (detail, score) = self.single_style_check(file_path)
             if score is not None:
-                if score < 9.9:
+                if score < PYLINT_MIN_SCORE:
                     style_pass = False
-                    pylint_log.writelines(detail)
-                    print detail 
+                    print detail
+                pylint_log.writelines(detail)
             else:
                 print 'score is None'
         pylint_log.close()
@@ -94,6 +95,7 @@ class StyleCheck:
         if style_pass is False:
             self.git_reset()
             tmp_f = open('delete_build', 'w')
+            tmp_f.write(os.environ['BUILD_NUMBER'])
             tmp_f.close()
             return 1
         return 0
@@ -135,10 +137,15 @@ def delete_build():
 
 def main():
     """
-    检查是不是有delete_build文件，有就删除build
+    常量信息最好通过配置文件输入
+    当存在delete_build文件，且这次push的commit数量为0的时候删除build。
+    否则继续进行代码规范检测
     """
     if os.path.isfile('delete_build'):
-        delete_build()
+        repo = Github('jiyaodian', 'mm6801112').get_user().get_repo('jydtest')
+        event = repo.get_events()[0]
+        if event.payload['size'] == 0:
+            delete_build()
         os.remove('delete_build')
         code = 0
     else:
