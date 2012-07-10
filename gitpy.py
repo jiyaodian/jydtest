@@ -6,10 +6,10 @@ sdf
 """
 
 import os
-ads
+
 def test():
     """
-    adfad
+    addfsdfsadfad
     """
     return os.path.exists('/home/')
 
