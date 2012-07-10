@@ -6,6 +6,7 @@ sdf
 """
 
 import os
+import urllib2
 
 def test():
     """
