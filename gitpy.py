@@ -31,7 +31,7 @@ class StyleCheck:
 
     def run_command(self, args, cwd="."):
         """
-        运行命令
+        运行shell命令
         """
         proc = subprocess.Popen(args, stdout=subprocess.PIPE, \
                 stderr=subprocess.PIPE, cwd=cwd)
