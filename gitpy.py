@@ -6,8 +6,7 @@ sdf
 """
 
 import os
-import urllib2
-
+sd
 def test():
     """
     addfsdfsadfad
