@@ -15,4 +15,4 @@ from github import Github
 
 DEBUG = True
 PYLINT_MIN_SCORE = 8
-sf
+ssf
