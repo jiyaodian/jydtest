@@ -5,6 +5,7 @@
 从github获取数据，并进行代码风格检查
 必须在jenkins服务器上面运行。。
 需要jenkins的环境变量
+teste
 """
 import subprocess
 import os
