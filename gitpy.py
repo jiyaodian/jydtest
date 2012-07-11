@@ -6,6 +6,7 @@
 必须在jenkins服务器上面运行。。
 需要jenkins的环境变量
 必须设定相关 全局变量
+sfd
 """
 import subprocess
 import os
