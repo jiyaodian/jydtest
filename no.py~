@@ -7,3 +7,12 @@
 需要jenkins的环境变量
 teste
 """
+import subprocess
+import os
+import codecs
+import logging
+from github import Github
+
+DEBUG = True
+PYLINT_MIN_SCORE = 8
+ssf
