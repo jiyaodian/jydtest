@@ -17,5 +17,3 @@ end_time = time.time()
 cost_time = end_time - start_time
 print("cost time %s, %ss/1w"%(cost_time, cost_time/10000))
 
-
-
