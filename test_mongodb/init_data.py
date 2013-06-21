@@ -10,7 +10,8 @@ coll = Connection("127.0.0.1", 27017)["test"]["test"]
 data = [2934234]*200
 for i in xrange(50000000):
 	dic = {
-		str(i): data,
+		"data": data,
+		"uid": i,
 	}
 	coll.save(dic)
 
